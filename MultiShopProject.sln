@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{8B0CFF6A-4457-48B4-B8A2-771CE058D4BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{EF9C9292-4992-4427-8088-7068D1267C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Catalog", "Services\Catalog\MultiShopProject.Catalog\MultiShopProject.Catalog.csproj", "{1C6FF154-84FF-4DCF-A7A5-D72CC3081494}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C6FF154-84FF-4DCF-A7A5-D72CC3081494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C6FF154-84FF-4DCF-A7A5-D72CC3081494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C6FF154-84FF-4DCF-A7A5-D72CC3081494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C6FF154-84FF-4DCF-A7A5-D72CC3081494}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF9C9292-4992-4427-8088-7068D1267C8C} = {8B0CFF6A-4457-48B4-B8A2-771CE058D4BF}
+		{1C6FF154-84FF-4DCF-A7A5-D72CC3081494} = {EF9C9292-4992-4427-8088-7068D1267C8C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A0FA255-C2AF-47E2-A5DC-A40D534C3D34}
+	EndGlobalSection
+EndGlobal
