@@ -25,7 +25,7 @@ namespace MultiShopProject.Catalog.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductsById(string id)
         {
-            var values = _productDetailService.GetByIdProductDetailAsync(id);
+            var values = await _productDetailService.GetByIdProductDetailAsync(id);
             return Ok(values);
         }
 
@@ -36,7 +36,7 @@ namespace MultiShopProject.Catalog.Controllers
             return Ok("Product Detail has been created!");
         }
 
-        [HttpPost]
+        [HttpDelete]
         public async Task<IActionResult> DeleteProductDetail(string id)
         {
             await _productDetailService.DeleteProductDetailAsync(id);

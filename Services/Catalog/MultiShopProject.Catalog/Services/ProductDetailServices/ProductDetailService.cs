@@ -8,8 +8,8 @@ namespace MultiShopProject.Catalog.Services.ProductDetailServices;
 
 public class ProductDetailService : IProductDetailService
 {
-    private readonly IMapper _mapper;
     private readonly IMongoCollection<ProductDetail> _productDetailCollection;
+    private readonly IMapper _mapper;
 
     public ProductDetailService(IMapper mapper, IDatabaseSettings _databaseSettings)
     {

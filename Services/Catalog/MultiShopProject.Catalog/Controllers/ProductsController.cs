@@ -36,7 +36,7 @@ namespace MultiShopProject.Catalog.Controllers
             return Ok("Product has been created!");
         }
 
-        [HttpPost]
+        [HttpDelete]
         public async Task<IActionResult> DeleteProduct(string id)
         {
             await _productService.DeleteProductAsync(id);

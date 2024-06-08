@@ -17,14 +17,14 @@ namespace MultiShopProject.Catalog.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllProductImage()
         {
-            var values = _productImageService.GetAllProductImagesAsync();
+            var values = await _productImageService.GetAllProductImagesAsync();
             return Ok(values);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductImageById(string id)
         {
-            var values = _productImageService.GetByIdProductImageAsync(id);
+            var values = await _productImageService.GetByIdProductImageAsync(id);
             return Ok(values);
         }
 
@@ -35,7 +35,7 @@ namespace MultiShopProject.Catalog.Controllers
             return Ok("Product Image has been created!");
         }
 
-        [HttpPost]
+        [HttpDelete]
         public async Task<IActionResult> DeleteProductImage(string id)
         {
             await _productImageService.DeleteProductImageAsync(id);
