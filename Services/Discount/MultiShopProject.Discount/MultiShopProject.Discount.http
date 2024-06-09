@@ -1,0 +1,6 @@
+@MultiShopProject.Discount_HostAddress = http://localhost:5031
+
+GET {{MultiShopProject.Discount_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
