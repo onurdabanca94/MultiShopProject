@@ -27,7 +27,7 @@ namespace MultiShop.Order.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetOrderDetailList()
         {
-            var values = await _getOrderDetailByIdQueryHandler.Handle();
+            var values = await _getOrderDetailQueryHandler.Handle();
             return Ok(values);
         }
 
