@@ -1,4 +1,4 @@
-﻿namespace MultiShop.Order.Application.Features.CQRS.Commands.AddressCommands;
+﻿namespace MultiShopProject.Order.Application.Features.CQRS.Commands.AddressCommands;
 
 public class CreateAddressCommand
 {

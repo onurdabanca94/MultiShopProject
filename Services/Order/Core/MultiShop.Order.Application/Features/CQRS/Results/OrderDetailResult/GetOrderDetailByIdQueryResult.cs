@@ -1,4 +1,4 @@
-﻿namespace MultiShop.Order.Application.Features.CQRS.Results.OrderDetailResult;
+﻿namespace MultiShopProject.Order.Application.Features.CQRS.Results.OrderDetailResult;
 
 public class GetOrderDetailByIdQueryResult
 {

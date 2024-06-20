@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MultiShop.Order.Application.Features.CQRS.Commands.OrderDetailCommands;
-using MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
-using MultiShop.Order.Application.Features.CQRS.Queries.OrderDetailQueries;
+using MultiShopProject.Order.Application.Features.CQRS.Commands.OrderDetailCommands;
+using MultiShopProject.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
+using MultiShopProject.Order.Application.Features.CQRS.Queries.OrderDetailQueries;
 
-namespace MultiShop.Order.WebApi.Controllers
+namespace MultiShopProject.Order.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

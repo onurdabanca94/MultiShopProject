@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using MultiShop.Order.Application.Features.Mediator.Results.OrderingResults;
+using MultiShopProject.Order.Application.Features.Mediator.Results.OrderingResults;
 
-namespace MultiShop.Order.Application.Features.Mediator.Queries.OrderingQueries;
+namespace MultiShopProject.Order.Application.Features.Mediator.Queries.OrderingQueries;
 
 public class GetOrderingByIdQuery : IRequest<GetOrderingByIdQueryResult>
 {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MultiShop.Order.Application.Interfaces;
-using MultiShop.Order.Persistence.Context;
+using MultiShopProject.Order.Application.Interfaces;
+using MultiShopProject.Order.Persistence.Context;
 using System.Linq.Expressions;
 
-namespace MultiShop.Order.Persistence.Repositories;
+namespace MultiShopProject.Order.Persistence.Repositories;
 
 public class Repository<T> : IRepository<T> where T : class
 {

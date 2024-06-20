@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace MultiShop.Order.Application.Interfaces;
+namespace MultiShopProject.Order.Application.Interfaces;
 
 public interface IRepository<T> where T : class
 {

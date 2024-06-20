@@ -1,4 +1,4 @@
-﻿namespace MultiShop.Order.Application.Features.CQRS.Results.AddressResults;
+﻿namespace MultiShopProject.Order.Application.Features.CQRS.Results.AddressResults;
 
 public class GetAddressByIdQueryResult
 {

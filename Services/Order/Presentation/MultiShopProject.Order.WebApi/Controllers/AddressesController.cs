@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MultiShop.Order.Application.Features.CQRS.Commands.AddressCommands;
-using MultiShop.Order.Application.Features.CQRS.Handlers.AddressHandlers;
-using MultiShop.Order.Application.Features.CQRS.Queries.AddressQueries;
+using MultiShopProject.Order.Application.Features.CQRS.Commands.AddressCommands;
+using MultiShopProject.Order.Application.Features.CQRS.Handlers.AddressHandlers;
+using MultiShopProject.Order.Application.Features.CQRS.Queries.AddressQueries;
 
-namespace MultiShop.Order.WebApi.Controllers
+namespace MultiShopProject.Order.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

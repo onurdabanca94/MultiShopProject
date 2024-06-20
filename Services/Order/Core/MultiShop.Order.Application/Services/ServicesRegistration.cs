@@ -1,7 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using MediatR;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MultiShop.Order.Application.Services;
+namespace MultiShopProject.Order.Application.Services;
 
 public static class ServiceRegistration
 {

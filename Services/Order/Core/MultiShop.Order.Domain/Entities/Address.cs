@@ -1,4 +1,4 @@
-﻿namespace MultiShop.Order.Domain.Entities;
+﻿namespace MultiShopProject.Order.Domain.Entities;
 
 public class Address
 {

@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using MultiShop.Order.Application.Features.Mediator.Commands.OrderingCommands;
-using MultiShop.Order.Application.Features.Mediator.Queries.OrderingQueries;
+using MultiShopProject.Order.Application.Features.Mediator.Commands.OrderingCommands;
+using MultiShopProject.Order.Application.Features.Mediator.Queries.OrderingQueries;
 
-namespace MultiShop.Order.WebApi.Controllers
+namespace MultiShopProject.Order.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

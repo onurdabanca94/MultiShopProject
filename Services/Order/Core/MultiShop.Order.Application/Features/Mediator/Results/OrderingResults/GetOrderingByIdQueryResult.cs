@@ -1,4 +1,4 @@
-﻿namespace MultiShop.Order.Application.Features.Mediator.Results.OrderingResults;
+﻿namespace MultiShopProject.Order.Application.Features.Mediator.Results.OrderingResults;
 
 public class GetOrderingByIdQueryResult
 {

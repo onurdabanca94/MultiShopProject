@@ -1,8 +1,8 @@
-﻿using MultiShop.Order.Application.Features.CQRS.Commands.OrderDetailCommands;
-using MultiShop.Order.Application.Interfaces;
-using MultiShop.Order.Domain.Entities;
+﻿using MultiShopProject.Order.Application.Features.CQRS.Commands.OrderDetailCommands;
+using MultiShopProject.Order.Application.Interfaces;
+using MultiShopProject.Order.Domain.Entities;
 
-namespace MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
+namespace MultiShopProject.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
 
 public class UpdateOrderDetailCommandHandler
 {

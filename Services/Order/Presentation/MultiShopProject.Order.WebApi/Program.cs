@@ -1,10 +1,13 @@
-using MultiShop.Order.Application.Features.CQRS.Handlers.AddressHandlers;
-using MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
-using MultiShop.Order.Application.Interfaces;
-using MultiShop.Order.Application.Services;
-using MultiShop.Order.Persistence.Repositories;
+using MultiShopProject.Order.Application.Features.CQRS.Handlers.AddressHandlers;
+using MultiShopProject.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
+using MultiShopProject.Order.Application.Interfaces;
+using MultiShopProject.Order.Application.Services;
+using MultiShopProject.Order.Persistence.Context;
+using MultiShopProject.Order.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<OrderContext>();
 
 // Add services to the container.
 

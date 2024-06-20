@@ -1,9 +1,9 @@
 ﻿using MediatR;
-using MultiShop.Order.Application.Features.Mediator.Commands.OrderingCommands;
-using MultiShop.Order.Application.Interfaces;
-using MultiShop.Order.Domain.Entities;
+using MultiShopProject.Order.Application.Features.Mediator.Commands.OrderingCommands;
+using MultiShopProject.Order.Application.Interfaces;
+using MultiShopProject.Order.Domain.Entities;
 
-namespace MultiShop.Order.Application.Features.Mediator.Handlers.OrderingHandlers;
+namespace MultiShopProject.Order.Application.Features.Mediator.Handlers.OrderingCommands;
 
 public class UpdateOrderingCommandHandler : IRequestHandler<UpdateOrderingCommand>
 {

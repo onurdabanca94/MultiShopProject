@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace MultiShop.Order.Application.Features.Mediator.Commands.OrderingCommands;
+namespace MultiShopProject.Order.Application.Features.Mediator.Commands.OrderingCommands;
 
 public class RemoveOrderingCommand : IRequest
 {

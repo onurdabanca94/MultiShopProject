@@ -1,9 +1,9 @@
-﻿using MultiShop.Order.Application.Features.CQRS.Queries.OrderDetailQueries;
-using MultiShop.Order.Application.Features.CQRS.Results.OrderDetailResult;
-using MultiShop.Order.Application.Interfaces;
-using MultiShop.Order.Domain.Entities;
+﻿using MultiShopProject.Order.Application.Features.CQRS.Queries.OrderDetailQueries;
+using MultiShopProject.Order.Application.Features.CQRS.Results.OrderDetailResult;
+using MultiShopProject.Order.Application.Interfaces;
+using MultiShopProject.Order.Domain.Entities;
 
-namespace MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
+namespace MultiShopProject.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
 
 public class GetOrderDetailByIdQueryHandler
 {

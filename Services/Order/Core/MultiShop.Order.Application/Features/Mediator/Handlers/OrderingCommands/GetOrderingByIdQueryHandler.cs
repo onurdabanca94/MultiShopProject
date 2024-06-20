@@ -1,10 +1,10 @@
 ﻿using MediatR;
-using MultiShop.Order.Application.Features.Mediator.Queries.OrderingQueries;
-using MultiShop.Order.Application.Features.Mediator.Results.OrderingResults;
-using MultiShop.Order.Application.Interfaces;
-using MultiShop.Order.Domain.Entities;
+using MultiShopProject.Order.Application.Features.Mediator.Queries.OrderingQueries;
+using MultiShopProject.Order.Application.Features.Mediator.Results.OrderingResults;
+using MultiShopProject.Order.Application.Interfaces;
+using MultiShopProject.Order.Domain.Entities;
 
-namespace MultiShop.Order.Application.Features.Mediator.Handlers.OrderingHandlers;
+namespace MultiShopProject.Order.Application.Features.Mediator.Handlers.OrderingCommands;
 
 public class GetOrderingByIdQueryHandler : IRequestHandler<GetOrderingByIdQuery, GetOrderingByIdQueryResult>
 {
