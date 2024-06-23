@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MultiShopProject.Order.Application.Features.CQRS.Commands.OrderDetailCommands;
 using MultiShopProject.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
 using MultiShopProject.Order.Application.Features.CQRS.Queries.OrderDetailQueries;
 
 namespace MultiShopProject.Order.WebApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderDetailsController : ControllerBase

@@ -22,9 +22,9 @@
     "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false, //default true idi.
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7027;http://localhost:5031",
+      "applicationUrl": "https://localhost:7193;",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -39,3 +39,5 @@
     }
   }
 }
+
+// https applicationUrl'i : "applicationUrl": "https://localhost:7027;http://localhost:5031",

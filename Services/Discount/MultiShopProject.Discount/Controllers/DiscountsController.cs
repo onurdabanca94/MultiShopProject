@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MultiShopProject.Discount.Dtos;
 using MultiShopProject.Discount.Services;
 
 namespace MultiShopProject.Discount.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DiscountsController : ControllerBase
