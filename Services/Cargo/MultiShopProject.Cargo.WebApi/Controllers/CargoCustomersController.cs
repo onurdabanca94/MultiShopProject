@@ -1,75 +1,76 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MultiShopProject.Cargo.Business.Abstract;
 using MultiShopProject.Cargo.Dto.Dtos.CargoCustomerDtos;
 using MultiShopProject.Cargo.Entity.Concrete;
 
-namespace MultiShopProject.Cargo.WebApi.Controllers
+namespace MultiShopProject.Cargo.WebApi.Controllers;
+
+[Authorize]
+[Route("api/[controller]")]
+[ApiController]
+public class CargoCustomersController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CargoCustomersController : ControllerBase
+    private readonly ICargoCustomerService _cargoCustomerService;
+
+    public CargoCustomersController(ICargoCustomerService cargoCustomerService)
     {
-        private readonly ICargoCustomerService _cargoCustomerService;
+        _cargoCustomerService = cargoCustomerService;
+    }
 
-        public CargoCustomersController(ICargoCustomerService cargoCustomerService)
-        {
-            _cargoCustomerService = cargoCustomerService;
-        }
+    [HttpGet]
+    public IActionResult CargoCustomerList()
+    {
+        var values = _cargoCustomerService.TGetAll();
+        return Ok(values);
+    }
 
-        [HttpGet]
-        public IActionResult CargoCustomerList()
-        {
-            var values = _cargoCustomerService.TGetAll();
-            return Ok(values);
-        }
+    [HttpGet("{id}")]
+    public IActionResult GetCargoCustomerById(int id)
+    {
+        var value = _cargoCustomerService.TGetById(id);
+        return Ok(value);
+    }
 
-        [HttpGet("{id}")]
-        public IActionResult GetCargoCustomerById(int id)
+    [HttpPost]
+    public IActionResult CreateCargoCustomer(CreateCargoCustomerDto createCargoCustomerDto)
+    {
+        CargoCustomer cargoCustomer = new CargoCustomer()
         {
-            var value = _cargoCustomerService.TGetById(id);
-            return Ok(value);
-        }
+            Address = createCargoCustomerDto.Address,
+            City = createCargoCustomerDto.City,
+            District = createCargoCustomerDto.District,
+            Email = createCargoCustomerDto.Email,
+            Name = createCargoCustomerDto.Name,
+            Phone = createCargoCustomerDto.Phone,
+            Surname = createCargoCustomerDto.Surname,
+        };
+        _cargoCustomerService.TInsert(cargoCustomer);
+        return Ok("Cargo Customer has been created!");
+    }
 
-        [HttpPost]
-        public IActionResult CreateCargoCustomer(CreateCargoCustomerDto createCargoCustomerDto)
-        {
-            CargoCustomer cargoCustomer = new CargoCustomer()
-            {
-                Address = createCargoCustomerDto.Address,
-                City = createCargoCustomerDto.City,
-                District = createCargoCustomerDto.District,
-                Email = createCargoCustomerDto.Email,
-                Name = createCargoCustomerDto.Name,
-                Phone = createCargoCustomerDto.Phone,
-                Surname = createCargoCustomerDto.Surname,
-            };
-            _cargoCustomerService.TInsert(cargoCustomer);
-            return Ok("Cargo Customer has been created!");
-        }
+    [HttpDelete]
+    public IActionResult RemoveCargoCustomer(int id)
+    {
+        _cargoCustomerService.TDelete(id);
+        return Ok("Cargo Customer has been removed!");
+    }
 
-        [HttpDelete]
-        public IActionResult RemoveCargoCustomer(int id)
+    [HttpPut]
+    public IActionResult UpdateCargoCustomer(UpdateCargoCustomerDto updateCargoCustomerDto)
+    {
+        CargoCustomer cargoCustomer = new CargoCustomer()
         {
-            _cargoCustomerService.TDelete(id);
-            return Ok("Cargo Customer has been removed!");
-        }
-
-        [HttpPut]
-        public IActionResult UpdateCargoCustomer(UpdateCargoCustomerDto updateCargoCustomerDto)
-        {
-            CargoCustomer cargoCustomer = new CargoCustomer()
-            {
-                Address = updateCargoCustomerDto.Address,
-                CargoCustomerId = updateCargoCustomerDto.CargoCustomerId,
-                City = updateCargoCustomerDto.City,
-                District = updateCargoCustomerDto.District,
-                Email = updateCargoCustomerDto.Email,
-                Name = updateCargoCustomerDto.Name,
-                Phone = updateCargoCustomerDto.Phone,
-                Surname = updateCargoCustomerDto.Surname
-            };
-            _cargoCustomerService.TUpdate(cargoCustomer);
-            return Ok("Cargo Customer has been updated!");
-        }
+            Address = updateCargoCustomerDto.Address,
+            CargoCustomerId = updateCargoCustomerDto.CargoCustomerId,
+            City = updateCargoCustomerDto.City,
+            District = updateCargoCustomerDto.District,
+            Email = updateCargoCustomerDto.Email,
+            Name = updateCargoCustomerDto.Name,
+            Phone = updateCargoCustomerDto.Phone,
+            Surname = updateCargoCustomerDto.Surname
+        };
+        _cargoCustomerService.TUpdate(cargoCustomer);
+        return Ok("Cargo Customer has been updated!");
     }
 }
