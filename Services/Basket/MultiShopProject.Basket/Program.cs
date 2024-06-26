@@ -5,14 +5,17 @@ using Microsoft.Extensions.Options;
 using MultiShopProject.Basket.LoginServices;
 using MultiShopProject.Basket.Services;
 using MultiShopProject.Basket.Settings;
+using System.IdentityModel.Tokens.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //Kullanýcý olmasý zorunluluðu - Kullanýcýyý giriþe zorlamak.
 var requireAuthorizePolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+JwtSecurityTokenHandler.DefaultMapInboundClaims = false; //Db'deki User Id'nin debug yaptýðýmýzda maplemesini yapmadan deðer olarak bize infoda vermesini saðlamak.yani : sub
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
 {
+    //opt.MapInboundClaims = false; sub olarak görüntüleme iþleminin aynýsý
     opt.Authority = builder.Configuration["IdentityServerUrl"];
     opt.Audience = "ResourceBasket";
     opt.RequireHttpsMetadata = false;
