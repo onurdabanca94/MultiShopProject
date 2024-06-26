@@ -3,3 +3,4 @@ Catalog -->  7192
 Discount --> 7193
 Order -->    7194
 Cargo -->    7195
+Basket -->   7196

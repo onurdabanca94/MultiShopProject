@@ -42,15 +42,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirement
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cargo", "Cargo", "{8DC0706D-CCF2-478D-8435-347024BE8C2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Cargo.Business", "Services\Cargo\MultiShopProject.Cargo.Business\MultiShopProject.Cargo.Business.csproj", "{223C6B0A-DD96-456E-A2BB-13661F95DF76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.Cargo.Business", "Services\Cargo\MultiShopProject.Cargo.Business\MultiShopProject.Cargo.Business.csproj", "{223C6B0A-DD96-456E-A2BB-13661F95DF76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Cargo.Entity", "Services\Cargo\MultiShopProject.Cargo.Entity\MultiShopProject.Cargo.Entity.csproj", "{FBE2EFDE-8250-470F-B61A-1397AF61CA69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.Cargo.Entity", "Services\Cargo\MultiShopProject.Cargo.Entity\MultiShopProject.Cargo.Entity.csproj", "{FBE2EFDE-8250-470F-B61A-1397AF61CA69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Cargo.DataAccess", "Services\Cargo\MultiShopProject.Cargo.DataAccess\MultiShopProject.Cargo.DataAccess.csproj", "{6A167258-D08D-4275-AB7F-784B56B68D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.Cargo.DataAccess", "Services\Cargo\MultiShopProject.Cargo.DataAccess\MultiShopProject.Cargo.DataAccess.csproj", "{6A167258-D08D-4275-AB7F-784B56B68D5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Cargo.Dto", "Services\Cargo\MultiShopProject.Cargo.Dto\MultiShopProject.Cargo.Dto.csproj", "{37D3DD40-7203-4827-9155-9D219616AED1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.Cargo.Dto", "Services\Cargo\MultiShopProject.Cargo.Dto\MultiShopProject.Cargo.Dto.csproj", "{37D3DD40-7203-4827-9155-9D219616AED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Cargo.WebApi", "Services\Cargo\MultiShopProject.Cargo.WebApi\MultiShopProject.Cargo.WebApi.csproj", "{F1733A67-DAC9-4C76-BAED-98E63CFCE682}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.Cargo.WebApi", "Services\Cargo\MultiShopProject.Cargo.WebApi\MultiShopProject.Cargo.WebApi.csproj", "{F1733A67-DAC9-4C76-BAED-98E63CFCE682}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{FBFEBB15-F6D7-48F9-B9FB-B663394CF5A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Basket", "Services\Basket\MultiShopProject.Basket\MultiShopProject.Basket.csproj", "{F178CE08-21A2-4B14-85F3-7621BE622452}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -106,6 +110,10 @@ Global
 		{F1733A67-DAC9-4C76-BAED-98E63CFCE682}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1733A67-DAC9-4C76-BAED-98E63CFCE682}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1733A67-DAC9-4C76-BAED-98E63CFCE682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F178CE08-21A2-4B14-85F3-7621BE622452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F178CE08-21A2-4B14-85F3-7621BE622452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F178CE08-21A2-4B14-85F3-7621BE622452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F178CE08-21A2-4B14-85F3-7621BE622452}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +138,8 @@ Global
 		{6A167258-D08D-4275-AB7F-784B56B68D5C} = {8DC0706D-CCF2-478D-8435-347024BE8C2C}
 		{37D3DD40-7203-4827-9155-9D219616AED1} = {8DC0706D-CCF2-478D-8435-347024BE8C2C}
 		{F1733A67-DAC9-4C76-BAED-98E63CFCE682} = {8DC0706D-CCF2-478D-8435-347024BE8C2C}
+		{FBFEBB15-F6D7-48F9-B9FB-B663394CF5A2} = {8B0CFF6A-4457-48B4-B8A2-771CE058D4BF}
+		{F178CE08-21A2-4B14-85F3-7621BE622452} = {FBFEBB15-F6D7-48F9-B9FB-B663394CF5A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A0FA255-C2AF-47E2-A5DC-A40D534C3D34}
