@@ -35,6 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.IdentitySe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{015527B8-2FBC-424A-A169-4AB273BF84BF}"
 	ProjectSection(SolutionItems) = preProject
+		FontAwesomeLink.txt = FontAwesomeLink.txt
 		IdentityServerVersionErrorSolution.txt = IdentityServerVersionErrorSolution.txt
 		PortainerCmd.txt = PortainerCmd.txt
 		PortNumbers.txt = PortNumbers.txt
@@ -60,7 +61,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.WebUI", "Frontends\MultiShopProject.WebUI\MultiShopProject.WebUI.csproj", "{28B59962-07A9-4913-8478-F238F0AD5534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Dto", "Frontends\MultiShopProject.Dto\MultiShopProject.Dto.csproj", "{27CB22F5-B151-4A4C-84CB-1F725B5B5A47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.Dto", "Frontends\MultiShopProject.Dto\MultiShopProject.Dto.csproj", "{27CB22F5-B151-4A4C-84CB-1F725B5B5A47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
