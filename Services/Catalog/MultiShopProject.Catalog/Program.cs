@@ -5,6 +5,7 @@ using MultiShopProject.Catalog.Services.FeatureSliderSerives;
 using MultiShopProject.Catalog.Services.ProductDetailServices;
 using MultiShopProject.Catalog.Services.ProductImageServices;
 using MultiShopProject.Catalog.Services.ProductServices;
+using MultiShopProject.Catalog.Services.SpecialOfferServices;
 using MultiShopProject.Catalog.Settings;
 using System.Reflection;
 
@@ -23,6 +24,7 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductDetailService, ProductDetailService>();
 builder.Services.AddScoped<IProductImageService, ProductImageService>();
 builder.Services.AddScoped<IFeatureSliderService, FeatureSliderService>();
+builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
