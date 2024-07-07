@@ -1,18 +1,14 @@
-﻿<div class="col-lg-4">
-    <div class="product-offer mb-30" style="height: 200px;">
-        <img class="img-fluid" src="https://as2.ftcdn.net/v2/jpg/05/38/31/95/1000_F_538319579_haXcYBafA4jCqXhd5eZ65ozrD315NHgC.jpg" alt="">
-        <div class="offer-text">
-            <h6 class="text-white text-uppercase">İndirim 20%</h6>
-            <h3 class="text-white mb-3">Özel Teklifler</h3>
-            <a href="" class="btn btn-primary">Alışverişe Başla</a>
+﻿@model List<ResultSpecialOfferDto>
+<div class="col-lg-4">
+    @foreach (var item in Model)
+    {
+        <div class="product-offer mb-30" style="height: 200px;">
+            <img class="img-fluid" src="@item.ImageUrl" alt="">
+            <div class="offer-text">
+                <h6 class="text-white text-uppercase">@item.Title</h6>
+                <h3 class="text-white mb-3">@item.SubTitle</h3>
+                <a href="" class="btn btn-primary">Alışverişe Başla</a>
+            </div>
         </div>
-    </div>
-    <div class="product-offer mb-30" style="height: 200px;">
-        <img class="img-fluid" src="https://media.istockphoto.com/id/1591660312/photo/happy-portrait-and-woman-with-shopping-bags-in-studio-after-sale-promotion-or-discount-smile.webp?b=1&s=170667a&w=0&k=20&c=Bn9bsH4RA1Boyxv77qRLWKJ44puQuSHP7oxu-oa3CKo=" alt="">
-        <div class="offer-text">
-            <h6 class="text-white text-uppercase">İndirim 30%</h6>
-            <h3 class="text-white mb-3">Günün Fırsatı</h3>
-            <a href="" class="btn btn-primary">Hemen Kullanın</a>
-        </div>
-    </div>
+    }
 </div>
