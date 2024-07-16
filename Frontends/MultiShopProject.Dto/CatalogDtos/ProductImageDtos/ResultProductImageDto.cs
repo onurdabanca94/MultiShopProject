@@ -1,8 +1,8 @@
-﻿namespace MultiShopProject.Catalog.Dtos.ProductImageDtos;
+﻿namespace MultiShopProject.Dto.CatalogDtos.ProductImageDtos;
 
-public class UpdateProductImageDto
+public class ResultProductImageDto
 {
-    public string ProductImageId { get; set; }
+    public string ProductImageID { get; set; }
     public string ImgOne { get; set; }
     public string ImgSecond { get; set; }
     public string ImgThird { get; set; }
