@@ -6,7 +6,7 @@ namespace MultiShopProject.WebUI.Controllers
 	{
 		public IActionResult Index()
 		{
-			var user = User.Claims;
+			//var user = User.Claims;
 			return View();
 		}
 	}
