@@ -56,5 +56,10 @@ namespace MultiShopProject.WebUI.Controllers
 
             return View();
         }
+
+        public IActionResult Deneme1()
+        {
+            return View();
+        }
     }
 }
