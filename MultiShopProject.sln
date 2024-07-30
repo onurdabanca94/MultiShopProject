@@ -37,6 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirement
 	ProjectSection(SolutionItems) = preProject
 		FontAwesomeLink.txt = FontAwesomeLink.txt
 		IdentityServerVersionErrorSolution.txt = IdentityServerVersionErrorSolution.txt
+		LoginIndex.txt = LoginIndex.txt
 		OcelotCodeExample.txt = OcelotCodeExample.txt
 		OcelotLink.txt = OcelotLink.txt
 		PortainerCmd.txt = PortainerCmd.txt
@@ -75,15 +76,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidApi", "RapidApi", "{4AB5AA70-439E-4C72-B603-33AFC4123680}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.OcelotGateway", "ApiGateway\MultiShopProject.OcelotGateway\MultiShopProject.OcelotGateway.csproj", "{F4B44535-1932-4EDA-B6E7-9EDB67420E72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.OcelotGateway", "ApiGateway\MultiShopProject.OcelotGateway\MultiShopProject.OcelotGateway.csproj", "{F4B44535-1932-4EDA-B6E7-9EDB67420E72}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{5D00843B-D465-46D2-B51F-2A573883C38E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Payment", "Services\Payment\MultiShopProject.Payment\MultiShopProject.Payment.csproj", "{7C5939BF-B2D6-47D6-A6AD-F0FC1408D5AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.Payment", "Services\Payment\MultiShopProject.Payment\MultiShopProject.Payment.csproj", "{7C5939BF-B2D6-47D6-A6AD-F0FC1408D5AD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{61164F5C-6084-44FD-8804-B10426AA6A1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Images", "Services\Images\MultiShopProject.Images\MultiShopProject.Images.csproj", "{D29CF257-41BC-42D7-8F2C-DF469DEDDD36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShopProject.Images", "Services\Images\MultiShopProject.Images\MultiShopProject.Images.csproj", "{D29CF257-41BC-42D7-8F2C-DF469DEDDD36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
