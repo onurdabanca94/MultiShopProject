@@ -4,6 +4,7 @@ using MultiShopProject.WebUI.Handlers;
 using MultiShopProject.WebUI.Services;
 using MultiShopProject.WebUI.Services.Abstracts;
 using MultiShopProject.WebUI.Services.CatalogServices.CategoryServices;
+using MultiShopProject.WebUI.Services.CatalogServices.ProductServices;
 using MultiShopProject.WebUI.Services.Concretes;
 using MultiShopProject.WebUI.Settings;
 
@@ -54,6 +55,11 @@ builder.Services.AddHttpClient<IUserService, UserService>(opt =>
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<ICategoryService, CategoryService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Catalog.Path}");
+}).AddHttpMessageHandler<ClientCredentialTokenHandler>();
+
+builder.Services.AddHttpClient<IProductService, ProductService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Catalog.Path}");
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();

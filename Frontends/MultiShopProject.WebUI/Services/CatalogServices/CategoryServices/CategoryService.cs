@@ -23,15 +23,22 @@ public class CategoryService : ICategoryService
 
     public async Task<List<ResultCategoryDto>> GetAllCategoriesAsync()
     {
+        //Önceki kullandığımız yöntem;
+
+        //var responseMessage = await _httpClient.GetAsync("categories");
+        //var jsonData = await responseMessage.Content.ReadAsStringAsync();
+        //var values = JsonConvert.DeserializeObject<List<ResultCategoryDto>>(jsonData);
+        //return values;
+
         var responseMessage = await _httpClient.GetAsync("categories");
         var values = await responseMessage.Content.ReadFromJsonAsync<List<ResultCategoryDto>>();
         return values;
     }
 
-    public async Task<GetByIdCategoryDto> GetByIdCategoryAsync(string id)
+    public async Task<UpdateCategoryDto> GetByIdCategoryAsync(string id)
     {
         var responseMessage = await _httpClient.GetAsync("categories/" + id);
-        var values = await responseMessage.Content.ReadFromJsonAsync<GetByIdCategoryDto>();
+        var values = await responseMessage.Content.ReadFromJsonAsync<UpdateCategoryDto>();
         return values;
     }
 
