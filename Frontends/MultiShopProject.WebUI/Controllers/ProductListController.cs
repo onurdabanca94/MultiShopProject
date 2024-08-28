@@ -15,12 +15,14 @@ namespace MultiShopProject.WebUI.Controllers
         }
         public IActionResult Index(string id)
         {
+            DirectoryList();
             ViewBag.i = id;
             return View();
         }
 
         public IActionResult ProductDetail(string id)
         {
+            DirectoryListDetail();
             ViewBag.x = id;
             return View();
         }
@@ -50,6 +52,19 @@ namespace MultiShopProject.WebUI.Controllers
             }
 
             return View();
+        }
+
+        public void DirectoryList()
+        {
+            ViewBag.directoryMain = "Ana Sayfa";
+            ViewBag.directoryProduct = "Ürünler";
+            ViewBag.directoryProductList = "Ürün Listesi";
+        }
+        public void DirectoryListDetail()
+        {
+            ViewBag.directoryMain = "Ana Sayfa";
+            ViewBag.directoryProductList = "Ürün Listesi";
+            ViewBag.directoryProductDetail = "Ürün Detayları";
         }
     }
 }

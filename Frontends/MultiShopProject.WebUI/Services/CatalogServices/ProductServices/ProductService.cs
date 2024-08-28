@@ -40,9 +40,11 @@ public class ProductService : IProductService
         return values;
     }
 
-    public Task<List<ResultProductWithCategoryDto>> GetProductsWithCategoryByCategoryIdAsync(string categoryId)
+    public async Task<List<ResultProductWithCategoryDto>> GetProductsWithCategoryByCategoryIdAsync(string categoryId)
     {
-        throw new NotImplementedException();
+        var responseMessage = await _httpClient.GetAsync("products/ProductListWithCategoryByCategoryId/" + categoryId);
+        var values = await responseMessage.Content.ReadFromJsonAsync<List<ResultProductWithCategoryDto>>();
+        return values;
     }
 
     public async Task UpdateProductAsync(UpdateProductDto updateProductDto)

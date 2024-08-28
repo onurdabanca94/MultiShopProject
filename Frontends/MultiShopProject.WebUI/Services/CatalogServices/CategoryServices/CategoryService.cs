@@ -23,12 +23,12 @@ public class CategoryService : ICategoryService
 
     public async Task<List<ResultCategoryDto>> GetAllCategoriesAsync()
     {
-        //Önceki kullandığımız yöntem;
-
+        #region Old Method
         //var responseMessage = await _httpClient.GetAsync("categories");
         //var jsonData = await responseMessage.Content.ReadAsStringAsync();
         //var values = JsonConvert.DeserializeObject<List<ResultCategoryDto>>(jsonData);
         //return values;
+        #endregion
 
         var responseMessage = await _httpClient.GetAsync("categories");
         var values = await responseMessage.Content.ReadFromJsonAsync<List<ResultCategoryDto>>();
