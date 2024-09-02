@@ -13,6 +13,7 @@ using MultiShopProject.WebUI.Services.CatalogServices.ProductDetailServices;
 using MultiShopProject.WebUI.Services.CatalogServices.ProductImageServices;
 using MultiShopProject.WebUI.Services.CatalogServices.ProductServices;
 using MultiShopProject.WebUI.Services.CatalogServices.SpecialOfferServices;
+using MultiShopProject.WebUI.Services.CommentServices;
 using MultiShopProject.WebUI.Services.Concretes;
 using MultiShopProject.WebUI.Settings;
 
@@ -110,6 +111,11 @@ builder.Services.AddHttpClient<IProductImageService, ProductImageService>(opt =>
 builder.Services.AddHttpClient<IProductDetailService, ProductDetailService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Catalog.Path}");
+}).AddHttpMessageHandler<ClientCredentialTokenHandler>();
+
+builder.Services.AddHttpClient<ICommentService, CommentService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Comment.Path}");
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
 builder.Services.AddHttpClient();
