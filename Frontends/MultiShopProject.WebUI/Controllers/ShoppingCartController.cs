@@ -16,8 +16,11 @@ public class ShoppingCartController : Controller
         _basketService = basketService;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string code, int discountRate, decimal totalPriceWithDiscount)
     {
+        ViewBag.code = code;
+        ViewBag.discountRate = discountRate;
+        ViewBag.totalPriceWithDiscount = totalPriceWithDiscount;
         ViewBag.directoryProject = "Ana Sayfa";
         ViewBag.directoryMain = "Ürünler";
         ViewBag.directoryProduct = "Sepetim";

@@ -57,5 +57,14 @@ namespace MultiShopProject.Discount.Controllers
             await _discountService.UpdateDiscountCouponAsync(updateCouponDto);
             return Ok("Coupon has been updated!");
         }
+
+        [HttpGet("GetDiscountCouponCountRate")]
+        public IActionResult GetDiscountCouponCountRate(string code)
+        {
+            var values = _discountService.GetDiscountCouponCountRate(code);
+            return Ok(values);
+        }
     }
 }
+
+//public int GetDiscountCouponCountRate(string code)
