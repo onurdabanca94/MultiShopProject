@@ -1,8 +1,8 @@
-﻿namespace MultiShopProject.Order.Application.Features.CQRS.Commands.AddressCommands;
+﻿namespace MultiShopProject.Dto.OrderDtos.OrderAddressDtos;
 
-public class CreateAddressCommand
+public class CreateOrderAddressDto
 {
-    public int AddressId { get; set; }
+    //public int AddressId { get; set; }
     public string UserId { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }

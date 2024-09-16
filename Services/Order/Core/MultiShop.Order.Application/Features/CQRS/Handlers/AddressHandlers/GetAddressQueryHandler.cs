@@ -19,7 +19,7 @@ public class GetAddressQueryHandler
         {
             AddressId = x.AddressId,
             City = x.City,
-            Detail = x.Detail,
+            Detail = x.DetailFirst,
             Disctrict = x.Disctrict,
             UserId = x.UserId
         }).ToList();

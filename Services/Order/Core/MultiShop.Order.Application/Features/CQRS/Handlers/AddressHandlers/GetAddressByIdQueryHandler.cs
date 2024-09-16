@@ -21,7 +21,7 @@ public class GetAddressByIdQueryHandler
         {
             AddressId = values.AddressId,
             City = values.City,
-            Detail = values.Detail,
+            Detail = values.DetailFirst,
             Disctrict = values.Disctrict,
             UserId = values.UserId
         };
