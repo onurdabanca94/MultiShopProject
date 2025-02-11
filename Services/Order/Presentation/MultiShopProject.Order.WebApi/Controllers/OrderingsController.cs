@@ -53,7 +53,7 @@ namespace MultiShopProject.Order.WebApi.Controllers
             return Ok("Order has been updated!");
         }
 
-        [HttpGet("GetOrderingByUserId")]
+        [HttpGet("GetOrderingByUserId/{id}")]
         public async Task<IActionResult> GetOrderingByUserId(string id)
         {
             var values = await _mediator.Send(new GetOrderingByUserIdQuery(id));

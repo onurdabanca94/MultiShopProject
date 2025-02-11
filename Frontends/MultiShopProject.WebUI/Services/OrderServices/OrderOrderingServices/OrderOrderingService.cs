@@ -10,9 +10,16 @@ public class OrderOrderingService : IOrderOrderingService
     {
         _httpClient = httpClient;
     }
+    //public async Task<List<ResultOrderingByUserIdDto>> GetOrderingByUserId(string id)
+    //{
+    //    //$"products/ProductListWithCategoryByCategoryId/{CategoryId}"
+    //    var responseMessage = await _httpClient.GetAsync("orders/GetOrderingByUserId?id=" + id);
+    //    var values = await responseMessage.Content.ReadFromJsonAsync<List<ResultOrderingByUserIdDto>>();
+    //    return values;
+    //}
     public async Task<List<ResultOrderingByUserIdDto>> GetOrderingByUserId(string id)
     {
-        var responseMessage = await _httpClient.GetAsync("orders/GetOrderingByUserId?id=" + id);
+        var responseMessage = await _httpClient.GetAsync($"orderings/GetOrderingByUserId/{id}");
         var values = await responseMessage.Content.ReadFromJsonAsync<List<ResultOrderingByUserIdDto>>();
         return values;
     }
