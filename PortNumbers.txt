@@ -8,3 +8,4 @@ Basket -->   7196
 Comment -->  7170 veya 5057
 Payment -->  7197
 Images -->   7198
+Message -->  7199

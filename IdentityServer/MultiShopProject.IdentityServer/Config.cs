@@ -21,6 +21,7 @@ namespace MultiShopProject.IdentityServer
             new ApiResource("ResourcePayment"){Scopes={"PaymentFullPermission"}},
             new ApiResource("ResourceImage"){Scopes={"ImagesFullPermission"}},
             new ApiResource("ResourceOcelot"){Scopes={"OcelotFullPermission"}},
+            new ApiResource("ResourceMessage"){Scopes={"MessageFullPermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
@@ -41,6 +42,7 @@ namespace MultiShopProject.IdentityServer
             new ApiScope("PaymentFullPermission","Full authority for payment operations"),
             new ApiScope("ImagesFullPermission","Full authority for images operations"),
             new ApiScope("OcelotFullPermission","Full authority for ocelot operations"),
+            new ApiScope("MessageFullPermission","Full authority for message operations"),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -64,7 +66,7 @@ namespace MultiShopProject.IdentityServer
                 ClientName = "Multi Shop Project Manager User",
                 AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                 ClientSecrets = {new Secret("multishopprojectsecret".Sha256())},
-                AllowedScopes = {"CatalogReadPermission","CatalogFullPermission", "BasketFullPermission" , "CommentFullPermission", "OcelotFullPermission" , "PaymentFullPermission", "ImagesFullPermission","OrderFullPermission","DiscountFullPermission",
+                AllowedScopes = {"CatalogReadPermission","CatalogFullPermission", "BasketFullPermission" , "CommentFullPermission", "OcelotFullPermission" , "PaymentFullPermission", "ImagesFullPermission","OrderFullPermission","DiscountFullPermission","MessageFullPermission",
                 IdentityServerConstants.LocalApi.ScopeName,
                 IdentityServerConstants.StandardScopes.Email,
                 IdentityServerConstants.StandardScopes.OpenId,
