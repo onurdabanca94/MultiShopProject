@@ -44,6 +44,7 @@ public class CargoCustomersController : ControllerBase
             Name = createCargoCustomerDto.Name,
             Phone = createCargoCustomerDto.Phone,
             Surname = createCargoCustomerDto.Surname,
+            UserCustomerId = createCargoCustomerDto.UserCustomerId,
         };
         _cargoCustomerService.TInsert(cargoCustomer);
         return Ok("Cargo Customer has been created!");
@@ -68,7 +69,8 @@ public class CargoCustomersController : ControllerBase
             Email = updateCargoCustomerDto.Email,
             Name = updateCargoCustomerDto.Name,
             Phone = updateCargoCustomerDto.Phone,
-            Surname = updateCargoCustomerDto.Surname
+            Surname = updateCargoCustomerDto.Surname,
+            UserCustomerId = updateCargoCustomerDto.UserCustomerId,
         };
         _cargoCustomerService.TUpdate(cargoCustomer);
         return Ok("Cargo Customer has been updated!");
