@@ -4,6 +4,7 @@ using MultiShopProject.WebUI.Handlers;
 using MultiShopProject.WebUI.Services;
 using MultiShopProject.WebUI.Services.Abstracts;
 using MultiShopProject.WebUI.Services.BasketServices;
+using MultiShopProject.WebUI.Services.CargoServices.CargoCompanyServices;
 using MultiShopProject.WebUI.Services.CatalogServices.AboutServices;
 using MultiShopProject.WebUI.Services.CatalogServices.BrandServices;
 using MultiShopProject.WebUI.Services.CatalogServices.CategoryServices;
@@ -98,6 +99,11 @@ builder.Services.AddHttpClient<IDiscountService, DiscountService>(opt =>
 builder.Services.AddHttpClient<IMessageService, MessageService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Message.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<ICargoCompanyService, CargoCompanyService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Cargo.Path}");
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<ICategoryService, CategoryService>(opt =>
