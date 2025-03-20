@@ -40,5 +40,19 @@ namespace MultiShopProject.Catalog.Controllers
             var values = await _statisticService.GetProductAvgPrice();
             return Ok(values);
         }
+
+        [HttpGet("GetMaxPriceProductName")]
+        public async Task<IActionResult> GetMaxPriceProductName()
+        {
+            var values = await _statisticService.GetMaxPriceProductName();
+            return Ok(values);
+        }
+
+        [HttpGet("GetMinPriceProductName")]
+        public async Task<IActionResult> GetMinPriceProductName()
+        {
+            var values = await _statisticService.GetMinPriceProductName();
+            return Ok(values);
+        }
     }
 }

@@ -30,6 +30,34 @@ public class StatisticService : IStatisticService
         return await _categoryCollection.CountDocumentsAsync(FilterDefinition<Category>.Empty);
     }
 
+    public async Task<string> GetMaxPriceProductName()
+    {
+        var filter = Builders<Product>.Filter.Empty;
+        var sort = Builders<Product>.Sort.Descending(x => x.ProductPrice);
+        var projection = Builders<Product>.Projection.Include(y =>
+                                                                            y.ProductName).Exclude("ProductId");
+        var product = await _productCollection.Find(filter)
+                                                .Sort(sort)
+                                                .Project(projection)
+                                                .FirstOrDefaultAsync();
+
+        return product.GetValue("ProductName").AsString;
+    }
+
+    public async Task<string> GetMinPriceProductName()
+    {
+        var filter = Builders<Product>.Filter.Empty;
+        var sort = Builders<Product>.Sort.Ascending(x => x.ProductPrice);
+        var projection = Builders<Product>.Projection.Include(y =>
+                                                                            y.ProductName).Exclude("ProductId");
+        var product = await _productCollection.Find(filter)
+                                                .Sort(sort)
+                                                .Project(projection)
+                                                .FirstOrDefaultAsync();
+
+        return product.GetValue("ProductName").AsString;
+    }
+
     public async Task<decimal> GetProductAvgPrice()
     {
         var pipeLine = new BsonDocument[]
