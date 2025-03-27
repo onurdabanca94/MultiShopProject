@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MultiShopProject.WebUI.Services.StatisticServices.CatalogStatisticServices;
+using MultiShopProject.WebUI.Services.StatisticServices.UserStatisticServices;
 
 namespace MultiShopProject.WebUI.Areas.Admin.Controllers;
 
@@ -7,9 +8,11 @@ namespace MultiShopProject.WebUI.Areas.Admin.Controllers;
 public class StatisticController : Controller
 {
     private readonly ICatalogStatisticService _catalogStatisticService;
-    public StatisticController(ICatalogStatisticService catalogStatisticService)
+    private readonly IUserStatisticService _userStatisticService;
+    public StatisticController(ICatalogStatisticService catalogStatisticService, IUserStatisticService userStatisticService)
     {
         _catalogStatisticService = catalogStatisticService;
+        _userStatisticService = userStatisticService;
     }
     public async Task<IActionResult> Index()
     {
@@ -25,6 +28,8 @@ public class StatisticController : Controller
         var getCategoryCount = await _catalogStatisticService.GetCategoryCount();
         var getMaxPriceProductName = await _catalogStatisticService.GetMaxPriceProductName();
         var getMinPriceProductName = await _catalogStatisticService.GetMinPriceProductName();
+
+        var getUserCount = await _userStatisticService.GetUserCount();
         //var getProductAvgPrice = await _catalogStatisticService.GetProductAvgPrice();
 
         ViewBag.getBrandCount = getBrandCount;
@@ -32,6 +37,8 @@ public class StatisticController : Controller
         ViewBag.getCategoryCount = getCategoryCount;
         ViewBag.getMaxPriceProductName = getMaxPriceProductName;
         ViewBag.getMinPriceProductName = getMinPriceProductName;
+
+        ViewBag.getUserCount = getUserCount;
         //ViewBag.getProductAvgPrice = getProductAvgPrice;
     }
 }

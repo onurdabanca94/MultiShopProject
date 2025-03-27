@@ -24,6 +24,7 @@ using MultiShopProject.WebUI.Services.MessageServices;
 using MultiShopProject.WebUI.Services.OrderServices.OrderAddressServices;
 using MultiShopProject.WebUI.Services.OrderServices.OrderOrderingServices;
 using MultiShopProject.WebUI.Services.StatisticServices.CatalogStatisticServices;
+using MultiShopProject.WebUI.Services.StatisticServices.UserStatisticServices;
 using MultiShopProject.WebUI.Services.UserIdentityServices;
 using MultiShopProject.WebUI.Settings;
 
@@ -76,6 +77,11 @@ builder.Services.AddHttpClient<IUserService, UserService>(opt =>
 builder.Services.AddHttpClient<ICatalogStatisticService, CatalogStatisticService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Catalog.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<IUserStatisticService, UserStatisticService>(opt =>
+{
+    opt.BaseAddress = new Uri(values.IdentityServerUrl);
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<IUserIdentityService, UserIdentityService>(opt =>
