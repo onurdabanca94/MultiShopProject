@@ -1,5 +1,16 @@
 ﻿<header class="main-header dark-bg">
 
+    <style>
+        .messages-menu {
+            position: relative;
+        }
+
+            .messages-menu .notify {
+                position: absolute;
+                top: 10px;
+                right: 5px;
+            }
+    </style>
     <!-- Logo -->
     <a href="../index.html" class="logo dark-bg">
         <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -29,7 +40,7 @@
                 <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="icon-envelope"></i>
-                        <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                        <div class="notify"> <span class="badge">@ViewBag.messageCount</span></div>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="header">You have 4 messages</li>
