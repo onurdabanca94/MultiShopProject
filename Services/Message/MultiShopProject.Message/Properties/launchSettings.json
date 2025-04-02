@@ -22,7 +22,7 @@
     "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false,
+      "launchBrowser": false, //default true idi.
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:7199;",
       "environmentVariables": {
