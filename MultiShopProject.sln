@@ -36,8 +36,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{015527B8-2FBC-424A-A169-4AB273BF84BF}"
 	ProjectSection(SolutionItems) = preProject
 		AdminStatisticApiForUI.txt = AdminStatisticApiForUI.txt
+		ArticlesAndBlogs.txt = ArticlesAndBlogs.txt
 		Card.txt = Card.txt
 		FontAwesomeLink.txt = FontAwesomeLink.txt
+		GoogleCloudStorageCodes.txt = GoogleCloudStorageCodes.txt
 		IdentityServerVersionErrorSolution.txt = IdentityServerVersionErrorSolution.txt
 		LoginIndex.txt = LoginIndex.txt
 		OcelotCodeExample.txt = OcelotCodeExample.txt
@@ -96,6 +98,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalR", "SignalR", "{57137B38-57B5-4889-B012-000083EBE300}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.SignalRRealTimeApi", "Services\SignalR\MultiShopProject.SignalRRealTimeApi\MultiShopProject.SignalRRealTimeApi.csproj", "{1DCE6586-EB0D-4BBC-8170-9F947E552E7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShopProject.Images.WebUI", "Services\Images\MultiShopProject.Images.WebUI\MultiShopProject.Images.WebUI.csproj", "{7D9C56F5-B9B6-4E5D-9067-D04CFBE8435A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -187,6 +191,10 @@ Global
 		{1DCE6586-EB0D-4BBC-8170-9F947E552E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DCE6586-EB0D-4BBC-8170-9F947E552E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DCE6586-EB0D-4BBC-8170-9F947E552E7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9C56F5-B9B6-4E5D-9067-D04CFBE8435A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9C56F5-B9B6-4E5D-9067-D04CFBE8435A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9C56F5-B9B6-4E5D-9067-D04CFBE8435A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9C56F5-B9B6-4E5D-9067-D04CFBE8435A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -226,6 +234,7 @@ Global
 		{17236625-1613-4669-AF78-CFEA4CF0956B} = {FC8D2A48-6916-4D12-8324-44227DF38922}
 		{57137B38-57B5-4889-B012-000083EBE300} = {8B0CFF6A-4457-48B4-B8A2-771CE058D4BF}
 		{1DCE6586-EB0D-4BBC-8170-9F947E552E7E} = {57137B38-57B5-4889-B012-000083EBE300}
+		{7D9C56F5-B9B6-4E5D-9067-D04CFBE8435A} = {61164F5C-6084-44FD-8804-B10426AA6A1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A0FA255-C2AF-47E2-A5DC-A40D534C3D34}
