@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Ana Sayfa" xml:space="preserve">
+    <value />
+  </data>
   <data name="Bugün" xml:space="preserve">
     <value>Aujourd'hui</value>
   </data>
@@ -131,5 +134,8 @@
   </data>
   <data name="Çok" xml:space="preserve">
     <value>Beaucoup</value>
+  </data>
+  <data name="Ürünler" xml:space="preserve">
+    <value />
   </data>
 </root>
