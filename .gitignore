@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /Services/Images/MultiShopProject.Images.WebUI/wwwroot/speedy-now-456012-v0-aae5cf1ffe01.json
 /Services/Images/MultiShopProject.Images.WebUI/appsettings.json
+/Frontends/MultiShopProject.WebUI/Views/Shared/Components/_NavbarUILayoutComponentPartial/Default.cshtml
